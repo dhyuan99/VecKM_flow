@@ -36,8 +36,11 @@ gen_flow_video(
 The data dimensions are given as followed:
 | File        | Description | Shape  |
 |-------------|-----|-------------|
-| `dataset_events_p.npy`    | event polarity  | `(n, )` int   |
 | `events_t`  | event time in seconds | `(n, )` float64    |
-| `events_xy` | undistorted normalized event coordinates. 1st row is width, 2nd row is height.  | `(n, 2)` float32      |
+| `events_xy` | Undistorted normalized event coordinates (focal length one). The range shall be around (-1, 1). See [Undistorted Normalized Coordinates]() for computing them. 1st row is width, 2nd row is height.  | `(n, 2)` float32      |
 
 ![Example outputs](assets/demo.gif)
+
+### Installation
+
+### Undistorted Normalized Coordinates
