@@ -37,7 +37,7 @@ gen_flow_video(
 ```
 
 The data dimensions are as followed:
-| Variables        | Description | Shape  |
+| Variables        | Description | Data Dimension  |
 |-------------|-----|-------------|
 | `events_t`  | Sorted event time in seconds | `(n, )` float64    |
 | `undistorted_events_xy` | Undistorted normalized event coordinates (focal length one). The range shall be around (-1, 1). See [Undistorted Normalized Coordinates](#undistorted-normalized-coordinates) for computing them. 1st row is width, 2nd row is height.  | `(n, 2)` float32      |
@@ -53,8 +53,10 @@ The prediction is visualized as a video like this:
 ```
 git clone https://github.com/dhyuan99/VecKM_flow.git
 cd VecKM_flow
+
 conda create -n VecKM_flow python=3.13
 conda activate VecKM_flow
+
 pip install --upgrade pip setuptools wheel
 python setup.py sdist bdist_wheel
 pip install .
