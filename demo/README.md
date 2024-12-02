@@ -18,4 +18,4 @@ The precomputed inputs for [MVSEC](https://daniilidis-group.github.io/mvsec/), [
 ```
 python main.py
 ```
-It will generate flow predictions and uncertainties. It also generates a flow prediction video at `output.mp4`. 
+It will generate flow predictions and uncertainties. It also generates a flow prediction video at `output.mp4`. It is helpful to read the comments at [main.py](./main.py) to understand the usage.
