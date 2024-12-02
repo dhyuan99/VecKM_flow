@@ -42,7 +42,9 @@ The data dimensions are as followed:
 | `flow_uncertainty` | Prediction uncertainty. | `(n, )` float32 >= 0 |
 
 The prediction is visualized as a video like this:
+<div align="center">
 ![Example outputs](assets/demo.gif)
+</div>
 
 ## Installation
 ```
@@ -75,4 +77,4 @@ def get_undistorted_events_xy(raw_events_xy, K, D):
     </a>
 </div>
 
-To reproduce the inference, we precompute the undistorted normalized coordinates. They can be downloaded in [this drive](). The data format is exactly the same as the [demo data](demo/demo_data). Therefore, it is straight-forward to use the API to inference the datasets.
+**[Reproduce the inference]** We precompute the undistorted normalized coordinates. They can be downloaded in [this drive](). The data format is exactly the same as the [demo data](demo/demo_data). Therefore, it is straight-forward to use the API to inference the datasets.
