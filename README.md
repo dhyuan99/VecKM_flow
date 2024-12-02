@@ -18,7 +18,7 @@
 
 ## Highlighted Features
 It is a generic normal flow estimator with event camera inputs. The API is called by following, after installing the package.
-```
+``` python
 estimator = VecKMNormalFlowEstimator(training_set='UNION')
 flow_predictions, flow_uncertainty = estimator.inference(events_t, events_xy)
 flow_predictions[flow_uncertainty > 0.3] = np.nan
