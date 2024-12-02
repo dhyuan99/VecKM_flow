@@ -43,7 +43,7 @@ The data dimensions are as followed:
 
 The prediction is visualized as a video like this:
 <div align="center">
-![Example outputs](assets/demo.gif)
+<img src="assets/demo.gif" alt="Watch the video">
 </div>
 
 ## Installation
