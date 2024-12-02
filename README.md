@@ -33,7 +33,7 @@ gen_flow_video(
     './frames', './output.mp4', fps=30)
 ```
 
-The data dimensions are given as followed:
+The data dimensions are as followed:
 | File        | Description | Shape  |
 |-------------|-----|-------------|
 | `events_t`  | event time in seconds | `(n, )` float64    |
@@ -41,7 +41,7 @@ The data dimensions are given as followed:
 | `flow_predictions` | Predicted normal flow. Unit: undistorted normalized pixels per second. | `(n, 2)` float32      |
 | `flow_uncertainty` | Prediction uncertainty. | `(n, )` float32 >= 0 |
 
-
+The prediction is visualized as a video like this:
 ![Example outputs](assets/demo.gif)
 
 ### Installation
