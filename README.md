@@ -50,7 +50,7 @@ The prediction is visualized as a video like this:
 </div>
 
 #### Training Set Options
-We provide four estimators, which can be selected by the parameter. The four parameters are `"UNION"`, `"MVSEC"`, `"DSEC"`, `"EVIMO"`, which state the training set that the estimator is trained on. `"UNION"` is the model that trained on the union of other three datasets. Therefore, it is generally recommended to use `training_set="UNION"`, which is set as default.
+We provide four estimators, which can be selected by the parameter `training_set`. The four possible parameters are `"UNION"`, `"MVSEC"`, `"DSEC"`, `"EVIMO"`, which state the training set that the estimator is trained on. `"UNION"` is the model that trained on the union of the three datasets. Therefore, it is generally recommended to use `training_set="UNION"`, which is set as default.
 ``` python
 estimator = VecKMNormalFlowEstimator(training_set=training_set)
 ```
