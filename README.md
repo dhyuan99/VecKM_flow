@@ -83,3 +83,26 @@ def get_undistorted_events_xy(raw_events_xy, K, D):
 </div>
 
 **[Reproduce the inference]** We precompute the undistorted normalized coordinates. They can be downloaded in [this drive](). The data format is exactly the same as the [demo data](demo/demo_data). Therefore, it is straight-forward to use the API to inference the datasets.
+
+## Citations
+If you find this helpful, please consider citing
+```
+```
+
+This project is an extension project from [VecKM](https://github.com/dhyuan99/VecKM), an ICML paper.
+```
+@InProceedings{pmlr-v235-yuan24b,
+  title = 	 {A Linear Time and Space Local Point Cloud Geometry Encoder via Vectorized Kernel Mixture ({V}ec{KM})},
+  author =       {Yuan, Dehao and Fermuller, Cornelia and Rabbani, Tahseen and Huang, Furong and Aloimonos, Yiannis},
+  booktitle = 	 {Proceedings of the 41st International Conference on Machine Learning},
+  pages = 	 {57871--57886},
+  year = 	 {2024},
+  editor = 	 {Salakhutdinov, Ruslan and Kolter, Zico and Heller, Katherine and Weller, Adrian and Oliver, Nuria and Scarlett, Jonathan and Berkenkamp, Felix},
+  volume = 	 {235},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {21--27 Jul},
+  publisher =    {PMLR},
+  pdf = 	 {https://raw.githubusercontent.com/mlresearch/v235/main/assets/yuan24b/yuan24b.pdf},
+  url = 	 {https://proceedings.mlr.press/v235/yuan24b.html},
+}
+```
