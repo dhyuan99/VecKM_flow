@@ -89,7 +89,7 @@ If you find this helpful, please consider citing
 ```
 ```
 
-This project is an extension project from [VecKM](https://github.com/dhyuan99/VecKM), an ICML paper.
+This project is an extension project from [VecKM](https://github.com/dhyuan99/VecKM), an ICML2024 paper.
 ```
 @InProceedings{pmlr-v235-yuan24b,
   title = 	 {A Linear Time and Space Local Point Cloud Geometry Encoder via Vectorized Kernel Mixture ({V}ec{KM})},
