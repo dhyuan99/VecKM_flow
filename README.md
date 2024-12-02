@@ -56,3 +56,11 @@ pip install .
 ```
 
 ## Undistorted Normalized Coordinates
+To obtain the undistorted normalized coordinates, one needs to utilize `cv2.undistortPoints` and obtain the intrinsic camera matrix `K` and distortion coefficient `D` from the dataset.
+``` python
+def get_undistorted_events_xy(raw_events_xy, K, D):
+    raw_events_xy = raw_events_xy.astype(np.float32)
+    undistorted_normalized_xy = cv2.undistortPoints(raw_events_xy.reshape(-1, 1, 2), K, D)
+    undistorted_normalized_xy = undistorted_normalized_xy.reshape(-1, 2)
+    return undistorted_normalized_xy
+```
