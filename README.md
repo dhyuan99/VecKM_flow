@@ -36,7 +36,7 @@ gen_flow_video(
 The data dimensions are as followed:
 | Variables        | Description | Shape  |
 |-------------|-----|-------------|
-| `events_t`  | event time in seconds | `(n, )` float64    |
+| `events_t`  | Sorted event time in seconds | `(n, )` float64    |
 | `undistorted_events_xy` | Undistorted normalized event coordinates (focal length one). The range shall be around (-1, 1). See [Undistorted Normalized Coordinates](#undistorted-normalized-coordinates) for computing them. 1st row is width, 2nd row is height.  | `(n, 2)` float32      |
 | `flow_predictions` | Predicted normal flow. Unit: undistorted normalized pixels per second. | `(n, 2)` float32      |
 | `flow_uncertainty` | Prediction uncertainty. | `(n, )` float32 >= 0 |
@@ -45,5 +45,12 @@ The prediction is visualized as a video like this:
 ![Example outputs](assets/demo.gif)
 
 ## Installation
+```
+conda create -n VecKM_flow python=3.13
+conda activate VecKM_flow
+pip install --upgrade pip setuptools wheel
+python setup.py sdist bdist_wheel
+pip install .
+```
 
 ## Undistorted Normalized Coordinates
