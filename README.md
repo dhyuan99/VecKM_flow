@@ -38,6 +38,9 @@ The data dimensions are given as followed:
 |-------------|-----|-------------|
 | `events_t`  | event time in seconds | `(n, )` float64    |
 | `events_xy` | Undistorted normalized event coordinates (focal length one). The range shall be around (-1, 1). See [Undistorted Normalized Coordinates]() for computing them. 1st row is width, 2nd row is height.  | `(n, 2)` float32      |
+| `flow_predictions` | Predicted normal flow. Unit: undistorted normalized pixels per second. | `(n, 2)` float32      |
+| `flow_uncertainty` | Prediction uncertainty. | `(n, )` float32 >= 0 |
+
 
 ![Example outputs](assets/demo.gif)
 
