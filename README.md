@@ -23,12 +23,12 @@ from VecKM_flow.inference import VecKMNormalFlowEstimator
 from VecKM_flow.visualize import gen_flow_video
 
 estimator = VecKMNormalFlowEstimator()
-flow_predictions, flow_uncertainty = estimator.inference(events_t, events_xy)
+flow_predictions, flow_uncertainty = estimator.inference(events_t, undistorted_events_xy)
 flow_predictions[flow_uncertainty > 0.3] = np.nan
 
 gen_flow_video(
     events_t.numpy(), 
-    events_xy.numpy(), 
+    undistorted_events_xy.numpy(), 
     flow_predictions.numpy(), 
     './frames', './output.mp4', fps=30)
 ```
@@ -37,7 +37,7 @@ The data dimensions are as followed:
 | Variables        | Description | Shape  |
 |-------------|-----|-------------|
 | `events_t`  | event time in seconds | `(n, )` float64    |
-| `events_xy` | Undistorted normalized event coordinates (focal length one). The range shall be around (-1, 1). See [Undistorted Normalized Coordinates](#undistorted-normalized-coordinates) for computing them. 1st row is width, 2nd row is height.  | `(n, 2)` float32      |
+| `undistorted_events_xy` | Undistorted normalized event coordinates (focal length one). The range shall be around (-1, 1). See [Undistorted Normalized Coordinates](#undistorted-normalized-coordinates) for computing them. 1st row is width, 2nd row is height.  | `(n, 2)` float32      |
 | `flow_predictions` | Predicted normal flow. Unit: undistorted normalized pixels per second. | `(n, 2)` float32      |
 | `flow_uncertainty` | Prediction uncertainty. | `(n, )` float32 >= 0 |
 
