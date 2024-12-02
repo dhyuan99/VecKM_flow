@@ -9,7 +9,7 @@
     <a href="http://users.umiacs.umd.edu/~yiannis/" target="_blank" style="text-decoration: none;">Yiannis Aloimonos</a>&nbsp;&nbsp;
     <a href="http://users.umiacs.umd.edu/~fer/" target="_blank" style="text-decoration: none;">Cornelia Fermüller</a>
     <br><br>
-    <a href="http://users.umiacs.umd.edu/~fer/" target="_blank" style="text-decoration: none;">Perception and Robotics Group at University of Maryland</a>
+    <a href="https://prg.cs.umd.edu" target="_blank" style="text-decoration: none;">Perception and Robotics Group at University of Maryland</a>
 </p>
 
 <p align='center';>
