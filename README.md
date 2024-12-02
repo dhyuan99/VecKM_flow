@@ -67,7 +67,9 @@ def get_undistorted_events_xy(raw_events_xy, K, D):
 ```
 
 ## Evaluated Datasets
-We evaluated the estimator on [MVSEC](), [DSEC](), [EVIMO](). The flow prediction videos of every evaluated scene can be found here: <a href="https://drive.google.com/drive/folders/1gkmUyZX5VRf8DxiBKL9CSdWdifjqZVq3?usp=sharing" target="_blank">
+**[Recommended to Watch]** We evaluated the estimator on [MVSEC](), [DSEC](), [EVIMO](). The flow prediction videos of every evaluated scene can be found here: 
+
+<a href="https://drive.google.com/drive/folders/1gkmUyZX5VRf8DxiBKL9CSdWdifjqZVq3?usp=sharing" target="_blank">
   <img src="assets/video_icon.png" alt="Watch the video" width="200">
 </a>
 
