@@ -16,6 +16,11 @@
 </b>
 </p>
 
+## Abstract
+<div align="center">
+<img src="assets/abstract.png">
+</div>
+
 ## API Usage
 It is a generic normal flow estimator with event camera inputs. The API is easily used by following codes, after [installing the package](#installation). See [demo](./demo/) for the codes and data for running the demo.
 ``` python
@@ -69,7 +74,7 @@ def get_undistorted_events_xy(raw_events_xy, K, D):
 ```
 
 ## Evaluated Datasets
-**[Recommended to Watch]** We evaluated the estimator on [MVSEC](https://daniilidis-group.github.io/mvsec/), [DSEC](https://dsec.ifi.uzh.ch), [EVIMO](https://better-flow.github.io/evimo/download_evimo_2.html). The flow prediction videos of every evaluated scene can be found here: 
+**[Recommend to Watch]** We evaluated the estimator on [MVSEC](https://daniilidis-group.github.io/mvsec/), [DSEC](https://dsec.ifi.uzh.ch), [EVIMO](https://better-flow.github.io/evimo/download_evimo_2.html). The flow prediction videos of every evaluated scene can be found here: 
 
 <div align="center">
     <a href="https://drive.google.com/drive/folders/1gkmUyZX5VRf8DxiBKL9CSdWdifjqZVq3?usp=sharing" target="_blank">
