@@ -33,4 +33,4 @@ gen_flow_video(
     './frames', './output.mp4', fps=30)
 ```
 
-![](assets/demo.gif)
+![Example outputs](assets/demo.gif)
