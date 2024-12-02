@@ -69,4 +69,4 @@ def get_undistorted_events_xy(raw_events_xy, K, D):
 ## Evaluated Datasets
 We evaluated the estimator on MVSEC, DSEC, EVIMO. The flow prediction videos of every evaluated scene can be found at [this drive]().
 
-To reproduce the inference, we provide the precomputed undistorted normalized coordinates. They can be downloaded in [this drive](). The data format is exactly the same as the [demo data](`demo/demo_data`).
+To reproduce the inference, we provide the precomputed undistorted normalized coordinates. They can be downloaded in [this drive](). The data format is exactly the same as the [demo data](demo/demo_data).
