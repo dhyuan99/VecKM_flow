@@ -67,12 +67,12 @@ def get_undistorted_events_xy(raw_events_xy, K, D):
 ```
 
 ## Evaluated Datasets
-**[Recommended to Watch]** We evaluated the estimator on [MVSEC](), [DSEC](), [EVIMO](). The flow prediction videos of every evaluated scene can be found here: 
+**[Recommended to Watch]** We evaluated the estimator on [MVSEC](https://daniilidis-group.github.io/mvsec/), [DSEC](https://dsec.ifi.uzh.ch), [EVIMO](https://better-flow.github.io/evimo/download_evimo_2.html). The flow prediction videos of every evaluated scene can be found here: 
 
 <div align="center">
     <a href="https://drive.google.com/drive/folders/1gkmUyZX5VRf8DxiBKL9CSdWdifjqZVq3?usp=sharing" target="_blank">
-    <img src="assets/video_icon.png" alt="Watch the video" width="200">
+    <img src="assets/video_icon.png" alt="Watch the video" width="300">
     </a>
 </div>
 
-To reproduce the inference, we precompute the undistorted normalized coordinates. They can be downloaded in [this drive](). The data format is exactly the same as the [demo data](demo/demo_data).
+To reproduce the inference, we precompute the undistorted normalized coordinates. They can be downloaded in [this drive](). The data format is exactly the same as the [demo data](demo/demo_data). Therefore, it is straight-forward to use the API to inference the datasets.
