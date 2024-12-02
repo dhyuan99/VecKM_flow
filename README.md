@@ -33,4 +33,11 @@ gen_flow_video(
     './frames', './output.mp4', fps=30)
 ```
 
+The data dimensions are given as followed:
+| File        | Description | Shape  |
+|-------------|-----|-------------|
+| `dataset_events_p.npy`    | event polarity  | `(n, )` int   |
+| `events_t`  | event time in seconds | `(n, )` float64    |
+| `events_xy` | undistorted normalized event coordinates. 1st row is width, 2nd row is height.  | `(n, 2)` float32      |
+
 ![Example outputs](assets/demo.gif)
