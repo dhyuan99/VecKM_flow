@@ -17,7 +17,7 @@
 </p>
 
 ## Highlighted Features
-It is a generic normal flow estimator with event camera inputs. The API is called by following, after installing the package.
+It is a generic normal flow estimator with event camera inputs. The API is called by following, after installing the package. See [./demo](./demo/) for the codes and data for running the demo.
 ``` python
 from VecKM_flow.inference import VecKMNormalFlowEstimator
 from VecKM_flow.visualize import gen_flow_video
