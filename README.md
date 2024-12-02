@@ -16,13 +16,13 @@
 </b>
 </p>
 
-## Highlighted Features
-It is a generic normal flow estimator with event camera inputs. The API is easily used by following codes, after installing the package. See [demo](./demo/) for the codes and data for running the demo.
+## API Usage
+It is a generic normal flow estimator with event camera inputs. The API is easily used by following codes, after [installing the package](#installation). See [demo](./demo/) for the codes and data for running the demo.
 ``` python
 from VecKM_flow.inference import VecKMNormalFlowEstimator
 from VecKM_flow.visualize import gen_flow_video
 
-estimator = VecKMNormalFlowEstimator(training_set='UNION')
+estimator = VecKMNormalFlowEstimator()
 flow_predictions, flow_uncertainty = estimator.inference(events_t, events_xy)
 flow_predictions[flow_uncertainty > 0.3] = np.nan
 
@@ -34,16 +34,16 @@ gen_flow_video(
 ```
 
 The data dimensions are as followed:
-| File        | Description | Shape  |
+| Variables        | Description | Shape  |
 |-------------|-----|-------------|
 | `events_t`  | event time in seconds | `(n, )` float64    |
-| `events_xy` | Undistorted normalized event coordinates (focal length one). The range shall be around (-1, 1). See [Undistorted Normalized Coordinates]() for computing them. 1st row is width, 2nd row is height.  | `(n, 2)` float32      |
+| `events_xy` | Undistorted normalized event coordinates (focal length one). The range shall be around (-1, 1). See [Undistorted Normalized Coordinates](#undistorted-normalized-coordinates) for computing them. 1st row is width, 2nd row is height.  | `(n, 2)` float32      |
 | `flow_predictions` | Predicted normal flow. Unit: undistorted normalized pixels per second. | `(n, 2)` float32      |
 | `flow_uncertainty` | Prediction uncertainty. | `(n, )` float32 >= 0 |
 
 The prediction is visualized as a video like this:
 ![Example outputs](assets/demo.gif)
 
-### Installation
+## Installation
 
-### Undistorted Normalized Coordinates
+## Undistorted Normalized Coordinates
