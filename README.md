@@ -97,7 +97,7 @@ def get_undistorted_events_xy(raw_events_xy, K, D):
 **[Reproduce the inference]** We precompute the undistorted normalized coordinates. They can be downloaded in [this drive](). The data format is exactly the same as the [demo data](demo/demo_data). Therefore, it is straight-forward to use the API to inference the datasets.
 
 ## Egomotion Estimation
-We propose an SVM-based egomotion estimator in the paper. The estimator uses predicted normal flow and IMU rotational measurement to predict the translation direction. The implementation is in [egomotion](egomotion).
+We propose an SVM-based egomotion estimator in the paper. The estimator uses predicted normal flow and IMU rotational measurement to predict the translation direction. The implementation is in [`./egomotion`](./egomotion).
 
 ## Citations
 If you find this helpful, please consider citing
