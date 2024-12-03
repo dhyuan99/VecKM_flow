@@ -12,4 +12,4 @@ After running
 python s1_main.py
 python s2_evaluate.py
 ```
-it will generate plots of egomotion GT v.s. predictions at `plot/`.
+it will generate plots of egomotion GT v.s. predictions at [`plot/`](plot).
