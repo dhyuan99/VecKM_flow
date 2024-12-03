@@ -99,6 +99,10 @@ def get_undistorted_events_xy(raw_events_xy, K, D):
 ## Egomotion Estimation
 We propose an SVM-based egomotion estimator in the paper. The estimator uses predicted normal flow and IMU rotational measurement to predict the translation direction. The implementation is in [`./egomotion`](./egomotion).
 
+<div align="center">
+<img src="assets/egomotion.gif" alt="Watch the video">
+</div>
+
 ## Citations
 If you find this helpful, please consider citing
 ```
