@@ -122,10 +122,10 @@ def minimize_negative_cheraility(g_x_A_x, n_x_g_x_B_x_w, v0):
 
 data_root = './data'
 scene_names = os.listdir(data_root)
-# scene_names = ['scene_03_02_000002']
 
 for scene in scene_names:
     print('processing:', scene)
+    os.system(f'mkdir -p plot/{scene}')
 
     scene_path = os.path.join(data_root, scene)
     dataset = OpticalFlowDatasetEvents(scene_path, dt=1/60.0, diff_imu_t_data_t=-0.02)
