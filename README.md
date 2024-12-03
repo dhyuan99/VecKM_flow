@@ -20,7 +20,12 @@
 </div>
 
 ## API Usage
-It is a generic normal flow estimator with event camera inputs. The API is easily used by following codes, after [installing the package](#installation). See [demo](./demo/) for the codes and data for running the demo.
+It is a generic normal flow estimator with event camera inputs. The API is easily used by following codes, after [installing the package](#installation). See [demo](./demo/) for the codes and data for running the demo:
+```
+cd demo
+python main.py
+```
+The API call is as simple as followed:
 ``` python
 from VecKM_flow.inference import VecKMNormalFlowEstimator
 from VecKM_flow.visualize import gen_flow_video
@@ -67,6 +72,7 @@ pip install --upgrade pip setuptools wheel
 python setup.py sdist bdist_wheel
 pip install .
 ```
+If you encounter any issues installing, please raise an issue.
 
 ## Undistorted Normalized Coordinates
 To obtain the undistorted normalized coordinates, one needs to utilize `cv2.undistortPoints` and obtain the intrinsic camera matrix `K` and distortion coefficient `D` from the dataset.
