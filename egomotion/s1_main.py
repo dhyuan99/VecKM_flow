@@ -130,9 +130,6 @@ for scene in scene_names:
     scene_path = os.path.join(data_root, scene)
     dataset = OpticalFlowDatasetEvents(scene_path, dt=1/60.0, diff_imu_t_data_t=-0.02)
 
-    os.system(f'mkdir -p plot/{scene}/xyz')
-    os.system(f'mkdir -p plot/{scene}/flow')
-
     map1, map2 = cv2.initInverseRectificationMap(
         dataset.K, # Intrinsics
         dataset.D, # Distortion
@@ -270,5 +267,5 @@ for scene in scene_names:
     # plt.plot(np.array(indices), ws_gt[:, 2], label='w gt y')
     # plt.plot(np.array(indices), ws_imu[:, 2], label='w imu y')
 
-    plt.show()
-    # plt.close()
+    # plt.show()
+    plt.close()

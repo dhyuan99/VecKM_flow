@@ -109,6 +109,6 @@ for scene in scene_names:
 
     fig.tight_layout()
     fig.savefig(os.path.join(data_root, f'{scene}.png'), dpi=300)
-
+    plt.close()
     # plt.show()
     # exit(0)

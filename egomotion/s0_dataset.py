@@ -8,13 +8,9 @@ import matplotlib.pyplot as plt
 def get_start_with(list_str, start_str):
     return sorted([s for s in list_str if s.startswith(start_str)])
     
-def filter_pred(pred, r_vars, a_vars, a_threshold):
-    # Circular standard deviation filtering
-    r_std = np.sqrt(r_vars)
-    # step 1 filtering.
-    step1_invalid_indices = a_vars > a_threshold
-    pred[step1_invalid_indices] = np.nan
-    r_std[step1_invalid_indices] = np.nan
+def filter_pred(pred, a_vars, a_threshold):
+    invalid_indices = a_vars > a_threshold
+    pred[invalid_indices] = np.nan
     # print(f'valid pct. after filertering: {np.mean(~np.isnan(pred)):.4f}')
     return pred
 
@@ -26,9 +22,8 @@ class OpticalFlowDatasetEvents:
         
         self.events_t = np.load(f'{path}/dataset_events_t.npy')
         self.events_xy = np.load(f'{path}/dataset_events_xy.npy')
-        self.flow = np.load(f'{path}/dataset_pred_flow_EVIMO_10_nop.npy')
-        self.r_vars = np.load(f'{path}/dataset_radius_vars_flow_EVIMO_10_nop.npy')
-        self.a_vars = np.load(f'{path}/dataset_angle_vars_flow_EVIMO_10_nop.npy')
+        self.flow = np.load(f'{path}/dataset_pred_flow.npy')
+        self.a_vars = np.load(f'{path}/dataset_pred_uncertainty.npy')
         
         self.info = np.load(f'{path}/dataset_info.npz', allow_pickle=True)
         self.K = self.info['K']
@@ -103,10 +98,9 @@ class OpticalFlowDatasetEvents:
         indices = np.arange(left_idx, right_idx)
         all_events_xy = self.events_xy[indices]
         flow = self.flow[indices]
-        r_vars = self.r_vars[indices]
         a_vars = self.a_vars[indices]
         
-        flow = filter_pred(flow, r_vars, a_vars, 0.3)
+        flow = filter_pred(flow, a_vars, 0.3)
         good_idx = np.linalg.norm(flow, axis=1) > 0
         
         events_xy = all_events_xy[good_idx]
