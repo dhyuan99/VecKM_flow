@@ -51,7 +51,7 @@ The data dimensions are as followed:
 
 The prediction is visualized as a video like this:
 <div align="center">
-<img src="assets/demo.gif" alt="Watch the video" width=100>
+<img src="assets/demo.gif" alt="Watch the video" width="100%">
 </div>
 
 #### Training Set Options
