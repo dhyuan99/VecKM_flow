@@ -46,6 +46,7 @@ class VecKMNormalFlowEstimator(nn.Module):
         assert torch.all(events_t[1:] >= events_t[:-1]), "Events are not sorted"
         
         events_t = events_t / self.P.t_radius
+        events_t = (events_t - events_t.min()).float()
         events_xy = events_xy / self.P.pxl_radius
         flow_predictions = torch.zeros_like(events_xy)
         flow_uncertainty = torch.zeros_like(events_xy[:, 0]) + 9999
