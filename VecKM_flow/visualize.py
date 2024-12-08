@@ -11,7 +11,7 @@ def images_to_video(image_folder, output_video, fps):
 
     video = cv2.VideoWriter(output_video, cv2.VideoWriter_fourcc(*'mp4v'), fps, (width, height))
 
-    for image in images:
+    for image in tqdm(images, desc=f"generating video, saved to {output_video}"):
         video.write(cv2.imread(os.path.join(image_folder, image)))
 
     cv2.destroyAllWindows()
