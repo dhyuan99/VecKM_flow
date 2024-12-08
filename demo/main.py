@@ -13,8 +13,8 @@ estimator = VecKMNormalFlowEstimator(training_set='UNION')
 """ Load demo data.
 WARNING: It is crutial to convert the raw pixel coordinates to the normalized coordinates. See the README for more details.
 """
-events_t = np.load('demo_data/dataset_events_t.npy')
-events_xy = np.load('demo_data/undistorted_events_xy.npy')
+events_t = np.load('/fs/nexus-projects/VecKM_flow/data/all_eval/MVSEC/indoor_flying1/dataset_events_t.npy')
+events_xy = np.load('/fs/nexus-projects/VecKM_flow/data/all_eval/MVSEC/indoor_flying1/undistorted_events_xy.npy')
 events_t = torch.tensor(events_t)
 events_xy = torch.tensor(events_xy).float()
 print(f"events_t: {events_t.shape}, events_xy: {events_xy.shape}")
