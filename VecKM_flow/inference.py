@@ -7,21 +7,13 @@ from . import models  # Import the models subpackage
 from .estimator import NormalEstimator
 
 class VecKMNormalFlowEstimator(nn.Module):
-    def __init__(self, 
-                 training_set='UNION', 
-                 attempt_time_scales=[0.33, 0.67, 1.0, 1.33, 1.67]
-        ):
+    def __init__(self, training_set='UNION'):
         """ Initialize the VecKM normal flow estimator.
         Args:
             training_set (str): The training set used to train the model. 
                 There are four options: 'UNION', 'MVSEC', 'DSEC', 'EVIMO'.
-            attempt_time_scales (list): A list of time scales coefficient to attempt for the inference.
-                The time scales are used to normalize the input timestamps.
-                The flow predictions are scaled accordingly back to the original timestamps.
-                The module will attempt to infer the normal flow at each time scale and return the most confident predictions.
         """
         assert training_set in ['UNION', 'EVIMO', 'DSEC', 'MVSEC'], "Invalid training set"
-        assert all([t > 0.0 for t in attempt_time_scales]), "Invalid time scales"
         if training_set == 'UNION':
             from .params import UNIONParams as P
         elif training_set == 'EVIMO':
@@ -33,7 +25,6 @@ class VecKMNormalFlowEstimator(nn.Module):
         else:
             raise ValueError("Invalid training set")
         self.P = P
-        self.attempt_time_scales = attempt_time_scales
 
         super(VecKMNormalFlowEstimator, self).__init__()
         self.estimator = self.init_model()
