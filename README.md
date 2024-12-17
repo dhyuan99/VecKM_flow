@@ -11,7 +11,7 @@
     <br><br>
     <a href="https://prg.cs.umd.edu" target="_blank" style="text-decoration: none;">Perception and Robotics Group at University of Maryland</a>
     <br><br>
-    <em>Under Review</em>
+    <a href="https://arxiv.org/abs/2412.11284" target="_blank" style="text-decoration: none;">Paper</a>
 </p>
 
 ## Abstract
