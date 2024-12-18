@@ -20,6 +20,10 @@
 <img src="assets/abstract.png">
 </div>
 
+<div align="center">
+<img src="assets/normal_flow.png">
+</div>
+
 ## API Usage
 It is a generic normal flow estimator with event camera inputs. The API is easily used by following codes, after [installing the package](#installation). See [demo](./demo/) for the codes and data for running the demo:
 ```
