@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 
-dataset_path = '/fs/nexus-projects/VecKM_flow/data/UNION/train/'
+dataset_path = './'
 
 @dataclass
 class MVSECParams:
