@@ -1,5 +1,6 @@
 ## Training Codes for VecKM_flow
 
+### Training Data
 Due to the storage limit, I only upload the processed training data from EVIMO. They can be downloaded [here](https://drive.google.com/drive/folders/1FN7hptJrLd_UvWd-uSgYGBFW0dTCLcXP?usp=sharing) [24GB]. Please put them in `./` so that the file structure looks like 
 ```
 .
@@ -21,8 +22,15 @@ Due to the storage limit, I only upload the processed training data from EVIMO. 
 ├── s2_inference.py
 └── s3_visualize.py
 ```
+#### To make your own training data,
+The training data contains the following files. If you make your data into the following format, it shall work as well.
+| Variables        | Description | Data Dimension  |
+|-------------|-----|-------------|
+| `events_t`  | Sorted event time in seconds | `(n, )` float64    |
+| `undistorted_events_xy` | Undistorted normalized event coordinates (focal length one). The range shall be around (-1, 1). See [Undistorted Normalized Coordinates](#undistorted-normalized-coordinates) for computing them. 1st row is width, 2nd row is height.  | `(n, 2)` float32      |
+| `undistorted_optical_flow.npy` | GT optical flow. Unit: undistorted normalized pixels per second. | `(n, 2)` float32      |
 
-Then execute 
+### Training
 ```
 python s1_train.py --dataset EVIMO
 ```
