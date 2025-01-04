@@ -26,8 +26,8 @@ Due to the storage limit, I only upload the processed training data from EVIMO. 
 The training data contains the following files. If you make your data into the following format, it shall work as well.
 | Variables        | Description | Data Dimension  |
 |-------------|-----|-------------|
-| `events_t`  | Sorted event time in seconds | `(n, )` float64    |
-| `undistorted_events_xy` | Undistorted normalized event coordinates (focal length one). The range shall be around (-1, 1). See [Undistorted Normalized Coordinates](#undistorted-normalized-coordinates) for computing them. 1st row is width, 2nd row is height.  | `(n, 2)` float32      |
+| `dataset_events_t.npy`  | Sorted event time in seconds | `(n, )` float64    |
+| `undistorted_events_xy.npy` | Undistorted normalized event coordinates (focal length one). The range shall be around (-1, 1). See [Undistorted Normalized Coordinates](#undistorted-normalized-coordinates) for computing them. 1st row is width, 2nd row is height.  | `(n, 2)` float32      |
 | `undistorted_optical_flow.npy` | GT optical flow. Unit: undistorted normalized pixels per second. | `(n, 2)` float32      |
 
 ### Training
