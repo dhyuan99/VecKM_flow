@@ -70,7 +70,7 @@ estimator = VecKMNormalFlowEstimator(training_set="UNION")  # default model
 git clone https://github.com/dhyuan99/VecKM_flow.git
 cd VecKM_flow
 
-conda create -n VecKM_flow python=3.13
+conda create -n VecKM_flow python=3.11
 conda activate VecKM_flow
 
 pip install --upgrade pip setuptools wheel
