@@ -11,12 +11,17 @@
     <br><br>
     <a href="https://prg.cs.umd.edu" target="_blank" style="text-decoration: none;">Perception and Robotics Group at University of Maryland</a>
     <br><br>
-    <em>Under Review</em>
+    <a href="https://arxiv.org/abs/2412.11284" target="_blank" style="text-decoration: none;">[Paper]</a> &nbsp;&nbsp
+    <a href="https://drive.google.com/drive/folders/1gkmUyZX5VRf8DxiBKL9CSdWdifjqZVq3?usp=sharing" target="_blank" style="text-decoration: none;">[Flow Prediction Videos (34 scenes)]</a>
 </p>
 
 ## Abstract
 <div align="center">
 <img src="assets/abstract.png">
+</div>
+
+<div align="center">
+<img src="assets/normal_flow.png">
 </div>
 
 ## API Usage
@@ -106,6 +111,12 @@ We propose an SVM-based egomotion estimator in the paper. The estimator uses pre
 ## Citations
 If you find this helpful, please consider citing
 ```
+@article{yuan2024learning,
+  title={Learning Normal Flow Directly From Event Neighborhoods},
+  author={Yuan, Dehao and Burner, Levi and Wu, Jiayi and Liu, Minghui and Chen, Jingxi and Aloimonos, Yiannis and Ferm{\"u}ller, Cornelia},
+  journal={arXiv preprint arXiv:2412.11284},
+  year={2024}
+}
 ```
 
 This project is an extension project from [VecKM](https://github.com/dhyuan99/VecKM), an ICML2024 paper.
