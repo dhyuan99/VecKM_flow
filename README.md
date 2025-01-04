@@ -108,6 +108,9 @@ We propose an SVM-based egomotion estimator in the paper. The estimator uses pre
 <img src="assets/egomotion.gif" alt="Watch the video" width="100%">
 </div>
 
+## Train Your Own Estimator
+Look at [this](train).
+
 ## Citations
 If you find this helpful, please consider citing
 ```

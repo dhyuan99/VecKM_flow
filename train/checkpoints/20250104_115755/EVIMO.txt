@@ -1,0 +1,2 @@
+epoch 19. total_loss: 0.00000. norm_pred: 0.24372; norm_opti: 0.16457.
+	sign correct rate: 0.70959. norm error abs: 0.36960. end point error: 0.62028.
