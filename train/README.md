@@ -1,7 +1,7 @@
 ## Training Codes for VecKM_flow
 
 ### Training Data
-Due to the storage limit, I only upload the processed training data from EVIMO. They can be downloaded [here](https://drive.google.com/drive/folders/1FN7hptJrLd_UvWd-uSgYGBFW0dTCLcXP?usp=sharing) [24GB]. Please put them in `./` so that the file structure looks like 
+Due to the storage limit, I only upload the processed training data from EVIMO. They can be downloaded [here](https://drive.google.com/drive/folders/1FN7hptJrLd_UvWd-uSgYGBFW0dTCLcXP?usp=sharing) [10GB]. Please put them in `./` so that the file structure looks like 
 ```
 .
 ├── checkpoints
