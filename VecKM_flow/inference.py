@@ -7,11 +7,14 @@ from . import models  # Import the models subpackage
 from .estimator import NormalEstimator
 
 class VecKMNormalFlowEstimator(nn.Module):
-    def __init__(self, training_set='UNION'):
+    def __init__(self, training_set='UNION', auto_scale_time=True):
         """ Initialize the VecKM normal flow estimator.
         Args:
             training_set (str): The training set used to train the model. 
                 There are four options: 'UNION', 'MVSEC', 'DSEC', 'EVIMO'.
+            auto_scale_time (bool): 
+                If True, the input time will be multiplied with an estimated time scale to try best fitting 50000 events per step.
+                If False, the input time will be used as is.
         """
         assert training_set in ['UNION', 'EVIMO', 'DSEC', 'MVSEC'], "Invalid training set"
         if training_set == 'UNION':
@@ -32,6 +35,8 @@ class VecKMNormalFlowEstimator(nn.Module):
         self.cuda_available = torch.cuda.is_available()
         if self.cuda_available:
             self.estimator = self.estimator.cuda()
+            
+        self.auto_scale_time = auto_scale_time
     
     @staticmethod
     def load_model(estimator, training_set):
@@ -56,7 +61,10 @@ class VecKMNormalFlowEstimator(nn.Module):
         flow_predictions = torch.zeros(events_t.shape[0], 2)
         flow_uncertainty = torch.zeros(events_t.shape[0]) + 9999
         
-        time_scale = self.time_scale_mining(events_t)
+        if self.auto_scale_time:
+            time_scale = self.time_scale_mining(events_t)
+        else:
+            time_scale = 1.0
         scaled_events_t = events_t * time_scale
         progress_bar = tqdm(
             total=events_t.shape[0], 
