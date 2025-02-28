@@ -83,7 +83,7 @@ class VecKM(nn.Module):
         ) * alpha
         self.A = nn.Parameter(self.A, False)                                    # (3, d)
 
-    def forward(self, pts):
+    def forward(self, pts, J):
         """ Compute the dense local geometry encodings of the given point cloud.
         Args:
             pts: (n, 3) tensor, the input point cloud.
@@ -93,8 +93,7 @@ class VecKM(nn.Module):
                the dense local geometry encodings. 
                note: it is complex valued. 
         """
-        J = get_adj_matrix(pts[:,1:], self.radius)                              # SparseReal(n, n)
-                                                                                # only use x, y for adjacency matrix, ignore t.
+        
         pA = pts @ self.A                                                       # Real(n, d
         epA = torch.cat([torch.cos(pA), torch.sin(pA)], dim=1)                  # Real(n, 2d)
         G = J @ epA                                                             # Real(n, 2d)
@@ -142,18 +141,22 @@ class FeatureTransform(nn.Module):
 class NormalEstimator(nn.Module):
     def __init__(self, d, alpha):
         super().__init__()
+        self.radius = 1.0
         self.vkm = VecKM(d, alpha)
         self.feat_trans = FeatureTransform(d)
 
-    def forward(self, events):
+    def forward(self, events, J):
         # events has shape (n, 3), txy.
-        G = self.vkm(events)
+        G = self.vkm(events, J)
         pred = self.feat_trans(G)
         return torch.concatenate((pred.real, pred.imag), dim=-1)
 
-    def inference(self, events, ensemble=3):
+    def inference(self, events, ensemble=10):
         all_preds = []
         alpha_list = np.linspace(0, 2*np.pi, ensemble, endpoint=False)
+
+        J = get_adj_matrix(events[:,1:], self.radius)                           # SparseReal(n, n)
+                                                                                # only use x, y for adjacency matrix, ignore t.
         for e in range(ensemble):
             alpha = alpha_list[e]
 
@@ -167,7 +170,7 @@ class NormalEstimator(nn.Module):
                 [np.sin(alpha), np.cos(alpha)]
             ]).float().to(events.device)
 
-            pred = self(events @ R.T) @ torch.inverse(R2d).T
+            pred = self(events @ R.T, J) @ torch.inverse(R2d).T
             all_preds.append(pred.detach().cpu())
 
         all_preds = torch.stack(all_preds, dim=1)
