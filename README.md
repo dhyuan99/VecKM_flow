@@ -15,6 +15,9 @@
     <a href="https://drive.google.com/drive/folders/1gkmUyZX5VRf8DxiBKL9CSdWdifjqZVq3?usp=sharing" target="_blank" style="text-decoration: none;">[Flow Prediction Videos (42 scenes)]</a>
 </p>
 
+## News
+🚀 A real-time implementation of this normal flow estimator: [https://github.com/dhyuan99/VecKM_flow_cpp](https://github.com/dhyuan99/VecKM_flow_cpp).
+
 ## Abstract
 <div align="center">
 <img src="assets/abstract.png">
