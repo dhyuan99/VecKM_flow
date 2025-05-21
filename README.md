@@ -12,7 +12,7 @@
     <a href="https://prg.cs.umd.edu" target="_blank" style="text-decoration: none;">Perception and Robotics Group at University of Maryland</a>
     <br><br>
     <a href="https://arxiv.org/abs/2412.11284" target="_blank" style="text-decoration: none;">[Paper]</a> &nbsp;&nbsp
-    <a href="https://drive.google.com/drive/folders/1gkmUyZX5VRf8DxiBKL9CSdWdifjqZVq3?usp=sharing" target="_blank" style="text-decoration: none;">[Flow Prediction Videos (42 scenes)]</a>
+    <a href="https://drive.google.com/drive/folders/1gkmUyZX5VRf8DxiBKL9CSdWdifjqZVq3?usp=sharing" target="_blank" style="text-decoration: none;">[Flow Prediction Videos (42 scenes from 5 datasets)]</a>
 </p>
 
 ## News
