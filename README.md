@@ -16,6 +16,7 @@
 </p>
 
 ## News
+🚀 VecKM_flow has been accepted by ICCV2025! See you in Honolulu, Hawaii!
 🚀 A real-time implementation of this normal flow estimator: [https://github.com/dhyuan99/VecKM_flow_cpp](https://github.com/dhyuan99/VecKM_flow_cpp).
 
 ## Abstract
