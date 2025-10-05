@@ -1,7 +1,7 @@
 <h1 align='center' style="text-align:center; font-weight:bold; font-size:2.0em;letter-spacing:2.0px;"> Learning Normal Flow Directly from Event Neighborhoods </h1>
 
 <p align='center' style="text-align:center;font-size:1.25em;">
-    <a href="https://www.cs.umd.edu/~dhyuan" target="_blank" style="text-decoration: none;">Dehao Yuan</a>&nbsp;&nbsp;
+    <a href="https://github.com/dhyuan99" target="_blank" style="text-decoration: none;">Dehao Yuan</a>&nbsp;&nbsp;
     <a href="https://www.aftersomemath.com" target="_blank" style="text-decoration: none;">Levi Burner</a>&nbsp;&nbsp;
     <a href="https://jiayi-wu-leo.github.io" target="_blank" style="text-decoration: none;">Jiayi Wu</a>&nbsp;&nbsp;
     <a href="https://scholar.google.com/citations?user=UKAsIsUAAAAJ&hl=en" target="_blank" style="text-decoration: none;">Minghui Liu</a>&nbsp;&nbsp;
